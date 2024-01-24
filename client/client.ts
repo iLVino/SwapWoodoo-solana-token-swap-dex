@@ -61,7 +61,7 @@ async function main() {
         tokenBOwner: program.provider.publicKey,
         tokenProgram: anchor.utils.token.TOKEN_PROGRAM_ID,
       })
-      .signers([anchor.Wallet.])
+      .signers([anchor.Wallet.local])
       .rpc();
     console.log("Token swap was successful");
 
