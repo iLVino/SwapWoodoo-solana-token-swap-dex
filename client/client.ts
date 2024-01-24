@@ -1,21 +1,16 @@
-import BN from "bn.js";
 import * as web3 from "@solana/web3.js";
 import * as anchor from "@coral-xyz/anchor";
 import type { TokenSwapProgram } from "../target/types/token_swap_program";
+import provider from "@project-serum/anchor/dist/cjs/provider";
 
 // Configure the client to use the local cluster
 anchor.setProvider(anchor.AnchorProvider.env());
-
 const program = anchor.workspace.TokenSwapProgram as anchor.Program<TokenSwapProgram>;
+
 
 
 // Assuming 'pg' is already defined and initialized in your environment
 console.log("My address:", program.provider.publicKey.toString());
-
-const initialBalance = await program.provider.connection.getBalance(program.provider.publicKey);
-console.log(
-  `Initial SOL balance: ${initialBalance / web3.LAMPORTS_PER_SOL} SOL`
-);
 
 // Define public keys for Token A and Token B
 const tokenAPublicKey = new web3.PublicKey(
@@ -30,6 +25,8 @@ const tokenBPublicKey = new web3.PublicKey(
 const tokenBMintAddress = new web3.PublicKey(
   "6Tj73eUiEhkF4PEDpS2urtpXLL9SuKVBVLzyrKqjgi4n"
 );
+
+const { publicKey, sendTransaction } = useWallet()
 
 async function main() {
   const amount = new anchor.BN(1000000);
@@ -64,7 +61,7 @@ async function main() {
         tokenBOwner: program.provider.publicKey,
         tokenProgram: anchor.utils.token.TOKEN_PROGRAM_ID,
       })
-      .signers([program.provider.wallet.payer])
+      .signers([anchor.Wallet.])
       .rpc();
     console.log("Token swap was successful");
 
@@ -95,3 +92,7 @@ main()
 function getAccount() {
   throw new Error("Function not implemented.");
 }
+function useWallet(): { publicKey: any; sendTransaction: any; } {
+  throw new Error("Function not implemented.");
+}
+
