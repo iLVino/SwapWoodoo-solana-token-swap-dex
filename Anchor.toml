@@ -9,8 +9,8 @@ token_swap_program = "CkDEBSt52MZaHatWguaDb8qaSmcbv1H6cbAP8Jc1tRjK"
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
-wallet = "~/.config/solana/id.json"
+cluster = "devnet"
+wallet = "/Users/stillo/my-solana-wallet/mykeypair.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"

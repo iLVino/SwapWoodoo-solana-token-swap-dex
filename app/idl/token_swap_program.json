@@ -1,0 +1,62 @@
+{
+  "version": "0.1.0",
+  "name": "token_swap_program",
+  "instructions": [
+    {
+      "name": "swapTokens",
+      "accounts": [
+        {
+          "name": "tokenAAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenAMint",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenAOwner",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "tokenBAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenBMint",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenBOwner",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "InvalidAmount",
+      "msg": "The provided amount must be greater than zero."
+    }
+  ],
+  "metadata": {
+    "address": "CkDEBSt52MZaHatWguaDb8qaSmcbv1H6cbAP8Jc1tRjK"
+  }
+}

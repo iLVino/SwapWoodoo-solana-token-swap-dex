@@ -12,7 +12,7 @@ export const AppBar: FC = () => {
                 height={30}
                 width={200}
             />
-            <span>Token Swap</span>
+            <span>Swap Woodo</span>
             <WalletMultiButton />
         </div>
     )
