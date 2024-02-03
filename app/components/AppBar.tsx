@@ -12,6 +12,12 @@ export const AppBar: FC = () => {
                 height={30}
                 width={200}
             />
+             <Image
+                alt="SwapWoodo logo"
+                src="/swapWoodoo.png"
+                height={80}
+                width={80}
+            />
             <span>Swap Woodo</span>
             <WalletMultiButton />
         </div>

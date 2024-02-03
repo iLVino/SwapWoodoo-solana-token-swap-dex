@@ -17,8 +17,8 @@ const Home: NextPage = () => {
             <Center>
                 <Box>
                     <TokenSwapComponent />
-                    <Airdrop />
-                    <TokenSwapForm />
+                    {/* <Airdrop />
+                    <TokenSwapForm /> */}
                 </Box>
             </Center>
         </div>

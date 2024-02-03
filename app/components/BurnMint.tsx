@@ -76,7 +76,7 @@ export const TokenSwapComponent = () => {
     return (
         <Box>
             <FormControl>
-                <FormLabel color="gray.200">Select Token A</FormLabel>
+                <FormLabel color="gray.200">Select your to Burn</FormLabel>
                 <Select color="gray.200" onChange={handleTokenAChange}>
                     {tokenAList.map((token, index) => (
                         <option key={index} value={token.name}>{token.name}</option>
