@@ -16,9 +16,9 @@ const Home: NextPage = () => {
             <AppBar />
             <Center>
                 <Box>
+                    <TokenSwapComponent />
                     <Airdrop />
                     <TokenSwapForm />
-                    <TokenSwapComponent />
                 </Box>
             </Center>
         </div>

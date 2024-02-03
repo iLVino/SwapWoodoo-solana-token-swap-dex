@@ -10,6 +10,9 @@ const nextConfig = {
 
         return config
     },
+    experimental: {
+        serverComponentsExternalPackages: ["@coral-xyz/anchor"],
+      },
 }
 
 module.exports = nextConfig
