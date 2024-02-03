@@ -1,4 +1,4 @@
-Project Name: **SwapWoodoo**
+### **Project SwapWoodoo**
 
 ### Description:
 **SwapWoodoo** is an innovative decentralized exchange (DEX) platform, designed to transform the meme coin ecosystem. This platform uniquely enables users to convert their meme coins (Token A) into a specialized DEX coin (Token B). The core functionality of SwapWoodoo lies in its ability to make meme coins deflationary while simultaneously increasing the supply of Token B. This approach not only adds value to the meme coin market but also empowers Token B holders.
